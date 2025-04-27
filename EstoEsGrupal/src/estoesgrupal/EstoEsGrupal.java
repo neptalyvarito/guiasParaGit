@@ -10,7 +10,7 @@ public class EstoEsGrupal {
         String nombre = pedirDatos("ingresa tu nombre: ");
         String apellido = pedirDatos("ingresa tu apellido: ");
         String nombreCompleto = nombre + " " + apellido;
-        System.out.println("Hola Mundo !!!!");
+        System.out.println("Hola Mundo !!!! Que te vaya bien ");
         System.out.println("De parte de: " + nombreCompleto);
     }
 
