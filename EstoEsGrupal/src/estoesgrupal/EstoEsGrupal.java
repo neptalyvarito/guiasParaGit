@@ -6,19 +6,19 @@ public class EstoEsGrupal {
 
     public static void main(String[] args) {
 
+        textoSubrayado(" PROGRAMA PARA SALUDOS");
         String nombreCompleto = pedirDatos("Ingresa tu nombre: ") + " " + pedirDatos("Ingresa tu apellido: ");
-        Integer opcion;
-        System.out.print("\n");
+        Integer opcion;       
 
         do {
 
-            opcion = Integer.valueOf(pedirDatos("""
-                                                Quieres saludar al mundo o a un pais?:
-                                                1: Al mundo
-                                                2: A un pais
-                                                3: Salir
-                                                > """));
-            System.out.print("\n");
+            textoSubrayado("""
+                           Quieres saludar al mundo o a un pais?:
+                           1: Al mundo
+                           2: A un pais
+                           3: Salir""");
+            opcion = Integer.valueOf(pedirDatos("> "));
+            System.out.println("-------------------------");
 
             switch (opcion) {
                 case 1:
@@ -34,13 +34,18 @@ public class EstoEsGrupal {
                     System.out.println("Ingrese una de las opciones mostradas!");
                     break;
             }
-            System.out.print("\n");
 
         } while (opcion != 3);
     }
 
+    private static void textoSubrayado(String texto) {
+        System.out.println("-----------------------");
+        System.out.println(texto);
+        System.out.println("-----------------------");
+    }
+
     private static void Saludo(String pais, String nombreCompleto) {
-        System.out.println("\nHola " + pais + "!!! Espero que estes bien.");
+        System.out.println("Hola " + pais + "!!! Espero que estes bien.");
         System.out.println("De parte de: " + nombreCompleto);
     }
 
