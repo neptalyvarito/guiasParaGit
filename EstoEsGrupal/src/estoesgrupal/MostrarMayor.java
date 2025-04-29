@@ -4,8 +4,6 @@ import java.util.Scanner;
 public class MostrarMayor {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-        
         System.out.println("--------------");
         System.out.print("Ingrese n1: ");
         int n1 = sc.nextInt();
@@ -14,8 +12,6 @@ public class MostrarMayor {
         System.out.print("Ingrese n3: ");
         int n3 = sc.nextInt();
         System.out.println("--------------");
-
-        System.out.println("Números ingresados: " + n1 + ", " + n2 + ", " + n3); 
 
         int mayor = n1;
         if(n2>mayor){
