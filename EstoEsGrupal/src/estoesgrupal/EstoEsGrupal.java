@@ -12,25 +12,20 @@ public class EstoEsGrupal {
 
         do {
 
-            System.out.println("Quieres saludar al mundo o a un pais?: ");
-            System.out.println("1: Al mundo");
-            System.out.println("2: A un pais");
-            System.out.println("3: A un pais");
-            System.out.print("> ");
-            Scanner sc = new Scanner(System.in);
-            opcion = Integer.valueOf(sc.nextLine());
+            opcion = Integer.valueOf(pedirDatos("""
+                                                Quieres saludar al mundo o a un pais?:
+                                                1: Al mundo
+                                                2: A un pais
+                                                3: Salir
+                                                > """));
             System.out.print("\n");
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Hola Mundo!!!!  Espero que estes bien.");
-                    System.out.println("De parte de: " + nombreCompleto);
+                    Saludo("Mundo", nombreCompleto);
                     break;
                 case 2:
-                    System.out.print("A que pais quiere saludar?: ");
-                    String pais = sc.nextLine();
-                    System.out.println("\nHola " + pais + "!!! Espero que estes bien.");
-                    System.out.println("De parte de: " + nombreCompleto);
+                    Saludo(pedirDatos("A que pais quiere saludar?: "), nombreCompleto);
                     break;
                 case 3:
                     System.out.println("Adios. Lindo dia!!!");
@@ -39,9 +34,14 @@ public class EstoEsGrupal {
                     System.out.println("Ingrese una de las opciones mostradas!");
                     break;
             }
-            System.out.println("");
-            
+            System.out.print("\n");
+
         } while (opcion != 3);
+    }
+
+    private static void Saludo(String pais, String nombreCompleto) {
+        System.out.println("\nHola " + pais + "!!! Espero que estes bien.");
+        System.out.println("De parte de: " + nombreCompleto);
     }
 
     private static String pedirDatos(String datoPedir) {
