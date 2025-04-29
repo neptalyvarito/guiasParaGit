@@ -10,14 +10,15 @@ public class EstoEsGrupal {
 
         textoSubrayado("PROGRAMA PARA SALUDOS");
         String nombreCompleto = pedirDatos("Ingresa tu nombre: ") + " " + pedirDatos("Ingresa tu apellido: ");
-        Integer opcion;
+        int opcion;
 
         do {
             textoSubrayado(
-                    "¿Quieres saludar al mundo o a un país?:\n" +
-                            "1: Al mundo\n" +
-                            "2: A un país\n" +
-                            "3: Salir");
+                "¿Quieres saludar al mundo o a un país?:\n" +
+                "1: Al mundo\n" +
+                "2: A un país\n" +
+                "3: Salir"
+            );
 
             try {
                 opcion = Integer.parseInt(pedirDatos("> "));
@@ -27,12 +28,6 @@ public class EstoEsGrupal {
                 continue;
             }
 
-            textoSubrayado("""
-                    Quieres saludar al mundo o a un pais?:
-                    1: Al mundo
-                    2: A un pais
-                    3: Salir""");
-            opcion = Integer.valueOf(pedirDatos("> "));
             System.out.println("-------------------------");
 
             switch (opcion) {
