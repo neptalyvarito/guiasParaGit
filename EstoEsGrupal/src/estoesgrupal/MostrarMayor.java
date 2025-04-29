@@ -14,6 +14,8 @@ public class MostrarMayor {
         int n3 = sc.nextInt();
         System.out.println("--------------");
 
+        System.out.println("Los números ingresados son : " + n1 + ", " + n2 + ", " +n3);
+
         int mayor = n1;
         if (n2 > mayor) {
             mayor = n2;
