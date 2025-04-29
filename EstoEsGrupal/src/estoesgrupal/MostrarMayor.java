@@ -27,6 +27,8 @@ public class MostrarMayor {
         System.out.println("--------------");
         System.out.println("El mayor es: " + mayor);
         System.out.println("--------------");
+        int menor = Math.min(n1, Math.min(n2,n3));
+        System.out.println("El menor es: " + menor);
 
     }
 }
