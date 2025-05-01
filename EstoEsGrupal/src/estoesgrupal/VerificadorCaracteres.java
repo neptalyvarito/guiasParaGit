@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
 public class VerificadorCaracteres {
 
@@ -28,6 +30,20 @@ public class VerificadorCaracteres {
 	System.out.println("Números: " + numeros);
 	System.out.println("Espacios: " + espacios);
 	System.out.println("Caracteres especiales: " + especiales);
+	
+	Map<Character, Integer> especialesMap = new HashMap<>();
+
+	for (int i = 0; i < cadena.length(); i++) {
+    		char c = cadena.charAt(i);
+    		if (!Character.isLetterOrDigit(c) && !Character.isWhitespace(c)) {
+        		especialesMap.put(c, especialesMap.getOrDefault(c, 0) + 1);
+    		}
+	}
+
+	System.out.println("Detalle de caracteres especiales:");
+	for (Map.Entry<Character, Integer> entry : especialesMap.entrySet()) {
+    		System.out.println("'" + entry.getKey() + "' aparece " + entry.getValue() + " vez/veces");
+	}
     }
 }
 
